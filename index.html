@@ -763,6 +763,115 @@
       font-size: 14px;
     }
 
+    /* 招生 / 招师 两大板块独立样式 */
+    .recruit-section {
+      margin-top: 56px;
+      padding: 44px 40px;
+      border-radius: 32px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(15, 23, 42, 0.18);
+    }
+
+    .recruit-student {
+      background:
+        radial-gradient(circle at 12% 0%, rgba(183, 121, 31, 0.32), transparent 38%),
+        linear-gradient(135deg, #0b1a3a 0%, #1d4ed8 60%, #2563eb 100%);
+    }
+
+    .recruit-teacher {
+      background:
+        radial-gradient(circle at 88% 0%, rgba(255, 215, 130, 0.28), transparent 40%),
+        linear-gradient(135deg, #2d1a05 0%, #b7791f 55%, #f59e0b 100%);
+    }
+
+    .recruit-banner {
+      max-width: 1100px;
+    }
+
+    .recruit-tag {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      color: #fff;
+      font-size: 13px;
+      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+    }
+
+    .recruit-section h2 {
+      font-size: 38px;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .recruit-section > .recruit-banner > p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: rgba(255, 255, 255, 0.92);
+      max-width: 880px;
+    }
+
+    .recruit-actions {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .recruit-btn {
+      padding: 14px 26px;
+      font-size: 15px;
+      font-weight: 800;
+      border-radius: 14px;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .recruit-contact {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.92);
+      padding: 8px 14px;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.18);
+      border: 1px dashed rgba(255, 255, 255, 0.32);
+    }
+
+    .recruit-highlights {
+      margin-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .recruit-student .recruit-highlights {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .recruit-card {
+      padding: 22px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(2px);
+    }
+
+    .recruit-card h3 {
+      color: #fff;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .recruit-card p {
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
     /* 视觉升级：更大气、克制、适合家长阅读的教育品牌风格 */
     .topbar {
       background: linear-gradient(90deg, #08111f, #173b78);
@@ -1070,6 +1179,29 @@
       .join-advantages {
         grid-template-columns: 1fr;
       }
+
+      .recruit-section {
+        padding: 30px 20px;
+        border-radius: 22px;
+      }
+
+      .recruit-section h2 {
+        font-size: 28px;
+      }
+
+      .recruit-highlights,
+      .recruit-student .recruit-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .recruit-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .recruit-btn {
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -1087,7 +1219,8 @@
         <a href="#service">服务说明</a>
         <a href="#trust">辅导方式</a>
         <a href="#assurance">家长放心</a>
-        <a href="#join">老师加盟</a>
+        <a href="#recruit-student">招收学生</a>
+        <a href="#recruit-teacher">招收老师</a>
         <a href="#faq">常见问题</a>
       </div>
       <a class="btn btn-primary" href="#teachers">查看团队</a>
@@ -1322,39 +1455,72 @@
       </div>
     </section>
 
-    <section id="join" class="final-cta">
-      <div>
-        <h2>老师加盟</h2>
-        <p>欢迎高校毕业生及在某几科拥有突出成绩的优秀同学加入学长团队。如果你乐于分享、擅长表达、愿意把自己的学习经验传递给更多家庭，欢迎联系我们。</p>
+    <section id="recruit-student" class="recruit-section recruit-student">
+      <div class="recruit-banner">
+        <span class="recruit-tag">招生通道 · 面向深圳高中家庭</span>
+        <h2>招收学生</h2>
+        <p>覆盖语文、数学、英语、物理、化学，按科目和薄弱模块匹配高分学长学姐。线上线下可选，先沟通试听再决定是否长期辅导。</p>
+        <div class="recruit-actions">
+          <a class="btn btn-primary recruit-btn" href="https://wj.qq.com/s2/27076105/1eb2/">填写预约试听问卷</a>
+          <a class="btn btn-light recruit-btn" href="#teachers">查看学长团队</a>
+          <span class="recruit-contact">预约电话：18688025481</span>
+        </div>
       </div>
-      <div class="cta-actions">
-        <a class="btn btn-light" href="https://wj.qq.com/s2/27075916/922b/">填写加盟信息</a>
-        <a class="btn btn-light" href="weixin://">加盟联系微信：zt2091403705</a>
+      <div class="recruit-highlights">
+        <article class="recruit-card">
+          <h3>真实高分背景</h3>
+          <p>团队学长学姐均毕业于广东省重点高中，包括深圳八大、汕头市金山中学等，拥有真实备考经验。</p>
+        </article>
+        <article class="recruit-card">
+          <h3>按问题精准匹配</h3>
+          <p>根据学生年级、目标科目、当前分数和薄弱模块推荐合适学长，避免盲目补课。</p>
+        </article>
+        <article class="recruit-card">
+          <h3>方法 + 陪跑</h3>
+          <p>定位知识漏洞、整理错题、拆解解题思路，建立可持续提分路径。</p>
+        </article>
+        <article class="recruit-card">
+          <h3>试听后再决定</h3>
+          <p>提交问卷不等于报名，先试听再决定是否长期辅导，过程透明、无强制承诺。</p>
+        </article>
       </div>
-      <div class="join-advantages">
-        <article class="advantage-card">
+    </section>
+
+    <section id="recruit-teacher" class="recruit-section recruit-teacher">
+      <div class="recruit-banner">
+        <span class="recruit-tag">招师通道 · 高校学长学姐欢迎加入</span>
+        <h2>招收老师</h2>
+        <p>欢迎广东省重点高中毕业、就读优质高校、并在某几科拥有突出成绩的学长学姐加入团队。乐于分享、擅长表达、愿意把高分经验传递给更多家庭，就是我们想找的人。</p>
+        <div class="recruit-actions">
+          <a class="btn btn-primary recruit-btn" href="https://wj.qq.com/s2/27075916/922b/">填写加盟信息</a>
+          <a class="btn btn-light recruit-btn" href="weixin://">加盟联系微信：zt2091403705</a>
+          <span class="recruit-contact">招师咨询同手机号：18688025481</span>
+        </div>
+      </div>
+      <div class="recruit-highlights">
+        <article class="recruit-card">
           <h3>高薪回报</h3>
-          <p>课时费高于市场平均水平，多劳多得。适合希望利用暑假、周末或课余时间获得稳定收入的优秀学长学姐。</p>
+          <p>课时费高于市场平均水平，多劳多得，适合利用暑假、周末或课余时间获得稳定收入。</p>
         </article>
-        <article class="advantage-card">
+        <article class="recruit-card">
           <h3>优质圈子</h3>
-          <p>团队成员来自金中、宝中、中山一中、佛山一中等优秀校友群体，可以交流大学学习经验、拓展人脉并共同成长。</p>
+          <p>团队成员来自金中、宝中、中山一中、佛山一中等优秀校友群体，可交流大学经验、拓展人脉。</p>
         </article>
-        <article class="advantage-card">
+        <article class="recruit-card">
           <h3>履历加分</h3>
-          <p>家教经历能锻炼表达能力、逻辑思维和责任意识，也能体现你的专业素养，为未来升学、实习和求职增加亮点。</p>
+          <p>家教经历能锻炼表达、逻辑和责任意识，体现专业素养，为升学、实习、求职增加亮点。</p>
         </article>
-        <article class="advantage-card">
+        <article class="recruit-card">
           <h3>时间灵活</h3>
-          <p>可根据自己的时间安排接单，自由选择线上或上门辅导，暑期、周末和平时晚间均可，不影响学习与实习安排。</p>
+          <p>自由选择线上或上门辅导，暑期、周末和平时晚间均可，不影响学习与实习安排。</p>
         </article>
-        <article class="advantage-card">
+        <article class="recruit-card">
           <h3>真实成就感</h3>
-          <p>用自己的亲身经历帮助学弟学妹走出迷茫、突破瓶颈，看到学生进步，会收获强烈的价值感和被需要感。</p>
+          <p>用亲身经历帮助学弟学妹突破瓶颈，看到学生进步，会收获强烈的价值感与被需要感。</p>
         </article>
-        <article class="advantage-card">
+        <article class="recruit-card">
           <h3>共同传递经验</h3>
-          <p>我们希望把名校学习方法、高分备考经验和学科提分路径传递给更多家庭。如果你渴望分享、乐于教学，欢迎加入。</p>
+          <p>把名校学习方法、高分备考经验和学科提分路径传递给更多家庭，乐于分享、欢迎加入。</p>
         </article>
       </div>
     </section>
